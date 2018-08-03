@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jbdc_Project:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="jbdc_Project.war">
+      <element id="artifact" artifact-name="jbdc_Project:war exploded" />
+    </root>
+  </artifact>
+</component>
