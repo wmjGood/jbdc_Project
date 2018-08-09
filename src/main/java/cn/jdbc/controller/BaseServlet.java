@@ -25,6 +25,8 @@ public abstract class BaseServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+      request.setCharacterEncoding("UTF-8");
+      response.setCharacterEncoding("UTF-8");
        //在jsp页面携带的参数   通过传过来的参数判断执行那个方法
         String methodName=request.getParameter("methodName");
         //指定的方法
@@ -70,7 +72,7 @@ public abstract class BaseServlet extends HttpServlet {
             //判断result是什么类型
             if(result instanceof  String ){
                 //返回的值
-                String viewName=request.toString()+".jsp";
+                String viewName=result.toString()+".jsp";
                 try {
                    //转发到页面
                     request.getRequestDispatcher(viewName).forward(request,response);
